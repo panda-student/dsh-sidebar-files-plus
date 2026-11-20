@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "工作区文件增强",
+    "description": "为工作区文件树增加选中、多选、发送到对话、复制路径与双击系统应用打开等手势。"
+  },
+  "bar.selected": "已选中 {count} 项",
+  "bar.send": "发送到对话",
+  "bar.copyPath": "复制路径",
+  "bar.prefs": "偏好设置",
+  "bar.clear": "清除选择",
+  "prefs.title": "文件树手势偏好",
+  "prefs.office": "双击办公文件用系统应用打开",
+  "prefs.extList": "白名单扩展名（逗号分隔）",
+  "prefs.extHint": "白名单之外的文件双击仍在预览中打开",
+  "menu.send": "发送到对话",
+  "menu.copyPath": "复制路径",
+  "notify.sent": "已作为文件引用插入输入框",
+  "notify.sendFailed": "输入框暂不可用，请确认会话已打开",
+  "notify.copied": "已复制 {count} 个路径",
+  "notify.copyFailed": "复制失败",
+  "notify.openFallback": "系统应用打开失败，已改为在预览中打开",
+  "notify.openFailed": "无法打开该文件",
+  "notify.selectionEmpty": "尚未选中任何条目"
+}

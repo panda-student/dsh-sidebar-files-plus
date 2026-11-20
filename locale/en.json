@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Workspace Files Plus",
+    "description": "Adds selection, multi-select, send-to-composer, copy path, and double-click-in-system-app gestures to the workspace file tree."
+  },
+  "bar.selected": "{count} selected",
+  "bar.send": "Send to composer",
+  "bar.copyPath": "Copy paths",
+  "bar.prefs": "Preferences",
+  "bar.clear": "Clear selection",
+  "prefs.title": "File tree gestures",
+  "prefs.office": "Double-click office files opens them with the system app",
+  "prefs.extList": "Whitelist extensions (comma separated)",
+  "prefs.extHint": "Files outside the whitelist still open in the preview",
+  "menu.send": "Send to composer",
+  "menu.copyPath": "Copy paths",
+  "notify.sent": "Inserted as file references into the composer",
+  "notify.sendFailed": "Composer unavailable; make sure the session is open",
+  "notify.copied": "Copied {count} path(s)",
+  "notify.copyFailed": "Copy failed",
+  "notify.openFallback": "System open failed; opened in the preview instead",
+  "notify.openFailed": "Cannot open this file",
+  "notify.selectionEmpty": "Nothing selected yet"
+}

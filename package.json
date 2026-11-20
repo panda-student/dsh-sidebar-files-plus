@@ -1,0 +1,45 @@
+{
+  "name": "dsh-sidebar-files-plus",
+  "version": "0.1.0",
+  "description": "Workspace file tree upgrades: right-click multi-select, send selection to the composer as reference chips, double-click opens office files with the system app, and a Ctrl+F find bar for preview pages.",
+  "keywords": ["deepseek-harness", "dsh-plugin", "file-tree", "multi-select", "find-in-preview"],
+  "license": "MIT",
+  "author": "SunZhiQiang (https://github.com/panda-student)",
+  "homepage": "https://github.com/panda-student/dsh-sidebar-files-plus#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panda-student/dsh-sidebar-files-plus.git"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "docs", "icon.svg"],
+  "scripts": {
+    "test": "node --check index.js && node --check client.js && node test/run.mjs"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-sidebar-files",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  }
+}
