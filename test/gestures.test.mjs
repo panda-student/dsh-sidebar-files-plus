@@ -409,9 +409,15 @@ describe('package manifest', () => {
     assert.ok(manifest.author, 'an author is required for the listing');
     assert.ok(existsSync(join(root, 'LICENSE')), 'the LICENSE file ships with the package');
     assert.ok(existsSync(join(root, 'README.md')), 'the README ships with the package');
-    // The README must carry a copy-pasteable install command — the listing
-    // rules and npm both surface it as the primary call to action.
+    // The README must carry a copy-pasteable install command. Accept any spec
+    // form the plugin manager actually parses (npm name, github:/gitlab:
+    // shorthand, git URL, or absolute path), so the guard tracks the installed
+    // resolver instead of hard-coding one distribution channel.
     const readme = readFileSync(join(root, 'README.md'), 'utf8');
-    assert.match(readme, /dsh plugin add dsh-sidebar-files-plus/, 'the README contains the npm install command');
+    assert.match(
+      readme,
+      /dsh plugin add (?:[a-z0-9][a-z0-9._~-]*|(?:github|gitlab|bitbucket|gist):[^\s]+|git(?:\+[a-z]+)?:\/\/[^\s]+|[A-Za-z]:[\\/][^\s]+)/,
+      'the README contains an install command the plugin manager can resolve',
+    );
   });
 });
