@@ -18,13 +18,19 @@ A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin tha
 
 ## Install
 
-Install straight from the repository:
+From npm:
+
+```sh
+dsh plugin add dsh-sidebar-files-plus
+```
+
+Or straight from the repository:
 
 ```sh
 dsh plugin add github:panda-student/dsh-sidebar-files-plus
 ```
 
-The `github:` shorthand is one of the install specs the plugin manager parses (`@deepseek-ai/dsh-plugin-manager/install-spec`), so no npm account or registry publish is involved. Or add the checkout directory with **Plugins → Add plugin**.
+Both are install specs the plugin manager parses (`@deepseek-ai/dsh-plugin-manager/install-spec`), so neither needs a local checkout. You can also add the directory itself with **Plugins → Add plugin**.
 
 Requires DeepSeek Harness `>=0.2.2-rc.1` (desktop or web profile; the plugin only extends the Web client).
 
